@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menggunakan Operator!"
+        android:textSize="15sp"
+        android:textColor="#20c126"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/angka1"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:id="@+id/angka2"
+        android:inputType="number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/angka1"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        />
+    
+<LinearLayout
+    android:id="@+id/ll1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/angka2"
+    android:layout_marginTop="45dp"
+    android:layout_centerHorizontal="true"
+    >
+
+
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#0cf115"
+        android:hint="+"
+        android:onClick="tambah"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#f44336"
+        android:hint="-"
+        android:onClick="kurang"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00ffff"
+        android:hint="*"
+        android:onClick="kali"
+        android:layout_marginLeft="10dp"/>
+    <Button
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#8a2be2"
+        android:hint="/"
+        android:onClick="bagi"
+        android:layout_marginLeft="10dp"/>
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tvhasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil"
+        android:layout_below="@+id/ll1"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvhasil"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#00bcd4"
+        android:hint="Bersihkan"
+        android:onClick="bersih"
+        android:textColor="#f44336"/>
+
+
+
+</RelativeLayout>
